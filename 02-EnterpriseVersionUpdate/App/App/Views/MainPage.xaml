@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.MainPage">
+
+    <StackLayout>
+
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+
+            <Label Text="App Version Info" 
+                   Margin="20"
+                   />
+            
+            <Label Text="{Binding AppShortVersionInfo}" />
+            <Label Text="{Binding AppVersionInfo}" />
+
+        </StackLayout>
+
+        <Button HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="End"
+                Margin="50"
+                Text="Check for Updates"
+                Command="{Binding CheckForUpdatesCommand}"
+            />
+
+    </StackLayout>
+
+</ContentPage>

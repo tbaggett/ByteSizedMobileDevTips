@@ -1,0 +1,67 @@
+﻿<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!--  array of downloads.  -->
+    <key>items</key>
+    <array>
+      <dict>
+        <!--  an array of assets to download  -->
+        <key>assets</key>
+        <array>
+          <!--  software-package: the ipa to install.  -->
+          <dict>
+            <!--  required. the asset kind.  -->
+            <key>kind</key>
+            <string>software-package</string>
+            <!--  required. the URL of the file to download.  -->
+            <key>url</key>
+            <string>
+              https://example.com/App.iOS.ipa
+            </string>
+          </dict>
+          <!--
+ display-image: the icon to display during download.
+-->
+          <dict>
+            <key>kind</key>
+            <string>display-image</string>
+            <key>needs-shine</key>
+            <false/>
+            <key>url</key>
+            <string>https://www.example.com/display-image.png</string>
+          </dict>
+          <!--
+ full-size-image: the large 512x512 icon used by iTunes. 
+-->
+          <dict>
+            <key>kind</key>
+            <string>full-size-image</string>
+            <key>needs-shine</key>
+            <false/>
+            <key>url</key>
+            <string>https://www.example.com/full-size-image.jpg</string>
+          </dict>
+        </array>
+        <key>metadata</key>
+        <dict>
+          <!--  required  -->
+          <key>bundle-identifier</key>
+          <string>com.companyname.App</string>
+          <!--  required. the download kind.  -->
+          <key>kind</key>
+          <string>software</string>
+          <!--
+ optional. displayed during download; typically company name 
+-->
+          <key>subtitle</key>
+          <string>App</string>
+          <!--
+ required. the title to display during the download. 
+-->
+          <key>title</key>
+          <string>Byte-Sized Mobile Dev Tips Sample App</string>
+        </dict>
+      </dict>
+    </array>
+  </dict>
+</plist>

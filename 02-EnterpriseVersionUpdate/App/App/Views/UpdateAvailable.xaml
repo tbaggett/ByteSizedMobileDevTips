@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.UpdateAvailable"
+             PageAppearingCommand="{Binding PageAppearingCommand}"
+             >
+
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 Margin="20"
+                 >
+            
+        <Label Text="{Binding Instructions}" />
+            
+        <WebView Margin="20"
+                 Source="{Binding HtmlSource}"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 BackgroundColor="White"
+                 />
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     Spacing="20"
+                     >
+
+            <Button Text="Install"
+                    WidthRequest="120"
+                    Margin="20"
+                    Command="{Binding InstallUpdateCommand}"
+                    />
+
+            <Button Text="Later"
+                    IsVisible="{Binding IsUpdateOptional}"
+                    WidthRequest="120"
+                    Margin="20"
+                    Command="{Binding IgnoreUpdateCommand}"
+                    />
+
+        </StackLayout>
+    
+    </StackLayout>
+    
+</ContentPage>
