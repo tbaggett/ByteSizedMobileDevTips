@@ -43,7 +43,6 @@ namespace App.ViewModels
                                                                 "Congrats, you have the latest version!",
                                                                 "Okay");
             }
-
         }
     }
 }
